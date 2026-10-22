@@ -1,0 +1,16 @@
+{
+  "name": "worksphere-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WorkSphere — Collaborative Workspace Platform",
+  "scripts": {
+    "dev": "concurrently -n \"server,client\" -c \"cyan,magenta\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm run test --prefix server",
+    "lint": "npm run lint --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
